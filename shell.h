@@ -92,7 +92,8 @@ typedef struct passinfo
 	int env_changed;
 	int status;
 
-	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */	int cmd_buf_type; /* CMD_type ||, &&, ; */
+	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory management*/
+	int cmd_buf_type; /* CMD_type ||, &&, ; */
 	int readfd;
 	int histcount;
 
@@ -100,7 +101,6 @@ typedef struct passinfo
 
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-
 	0, 0, 0}
 
 /**
